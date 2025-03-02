@@ -195,7 +195,11 @@
           </h1>
         </div>
         <div class="flex justify-center items-center bg-zinc-800 w-fit mx-auto">
-          <span
+          <div id="serviceInfoBox" class="hidden mt-6 p-6 bg-white text-gray-800 shadow-lg rounded-lg border border-gray-200 max-w-2xl mx-auto">
+            <h3 id="serviceTitle" class="text-2xl font-bold text-gray-800"></h3>
+            <p id="serviceDescription" class="text-lg text-gray-600 mt-2"></p>
+        </div>
+        <span
             data-services=""
             id="pcbuildingText"
             class="border-r rounded-l-sm px-3 py-2 hover:bg-Accent bg-Accent lg:px-6 lg:py-3 font-[500] cursor-pointer"
@@ -733,5 +737,28 @@
       // english
     </script>
     <!-- <script src="script.js"></script> -->
+    <script>
+      document.querySelectorAll("[data-services]").forEach(service => {
+          service.addEventListener("click", function () {
+              var infoBox = document.getElementById("serviceInfoBox");
+              var title = document.getElementById("serviceTitle");
+              var description = document.getElementById("serviceDescription");
+  
+              // Define service descriptions
+              var serviceDetails = {
+                  "PC Building": "Every PC I build is fully custom-made, designed specifically for your needs—no generic pre-built systems. Whether you’re a first-time buyer or a tech enthusiast, I’ll guide you through the process to ensure you get the best possible setup.",
+                  "Upgrades": "I offer personalized PC upgrades tailored to your needs. If you're unsure what to upgrade, I can analyze your system and recommend improvements, or if you already know, I can provide and install the components for you.",
+                  "Small Repairs": "I provide repair services for phones, tablets, and laptops. Whether you have a cracked screen, a battery issue, or software problems, I can diagnose and fix the issue efficiently."
+              };
+  
+              // Update title and description
+              title.innerText = this.innerText;
+              description.innerText = serviceDetails[this.innerText] || "Service details coming soon.";
+  
+              // Show the info box
+              infoBox.classList.remove("hidden");
+          });
+      });
+  </script>
   </body>
 </html>
