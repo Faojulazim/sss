@@ -1,10 +1,11 @@
-//mobile size translate-x-[27px]
 const toggler = document.querySelectorAll("[data-languageSelection]");
+
+// translate-x-[40px]
 toggler.forEach((items) => {
   items.addEventListener("change", () => {
     if (items.value == "Deutsch") {
       document.querySelector("#heading").innerHTML =
-        "<span class='text-Accent font-[600]'>Benutzerdefinierte PCs</span> sind in Sicht";
+        "<span class='text-newAccent font-[600]'>Benutzerdefinierte PCs</span> sind in Sicht";
       document.querySelector("#titleP").innerText =
         "Keine Notwendigkeit für überteuerte Sonderanfertigungen. Pro Kunde erstellt, keine versteckten Kosten.";
       document.querySelector("#quoteBtn").innerText =
@@ -44,6 +45,8 @@ toggler.forEach((items) => {
       document.querySelector("#serviceweprovideHeading").innerText =
         "Dienstleistungen, die wir anbieten";
       document.querySelector("#ourservices").innerText = "Our Services";
+      document.querySelector("#serviceweprovideHeading").innerText =
+        "Services We Provide";
       document.querySelector("#servicesPara").innerText =
         "We provide a lot of services. You can choose the service you need by contacting us. we have been serving for 2 years.";
       document.querySelector("#servicesBtn").innerHTML =
