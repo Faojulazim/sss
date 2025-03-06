@@ -59,6 +59,8 @@
     />
     <link href="dist/style.css" rel="stylesheet" />
     <script defer src="script.js"></script>
+    <script defer src="changeNav.js"></script>
+
     <title>Document</title>
   </head>
   <body class="bg-black scroll-smooth transition-all duration-300" data-body="">
@@ -68,7 +70,7 @@
         data-bgzinc400=""
       >
         <div
-          class="flex relative items-center justify-between w-full lg:w-fit px-7"
+          class="flex relative items-center justify-between w-full lg:w-fit px-0 500:px-2 md:px-7"
         >
           <img
             class="w-[70px] border-2 rounded-[2px] lg:w-[75px]"
@@ -114,6 +116,7 @@
             <a href="index.html#home">
               <li
                 class="text-md 2xl:text-lg w-fit b relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent cursor-pointer"
+                data-allListItems=""
               >
                 Home
               </li>
@@ -121,6 +124,7 @@
             <a href="gallery.html">
               <li
                 class="text-md 2xl:text-lg w-fit b relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent cursor-pointer"
+                data-allListItems=""
               >
                 Gallery
               </li>
@@ -128,6 +132,7 @@
             <a href="service.html#service">
               <li
                 class="text-md 2xl:text-lg w-fit b relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent cursor-pointer"
+                data-allListItems=""
               >
                 Services
               </li>
@@ -135,6 +140,7 @@
             <a href="impressum.html">
               <li
                 class="text-md 2xl:text-lg w-fit b relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent cursor-pointer"
+                data-allListItems=""
               >
                 Impressum
               </li>
@@ -143,6 +149,7 @@
             <a href="non.html">
               <li
                 class="text-md 2xl:text-lg w-fit b relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent cursor-pointer"
+                data-allListItems=""
               >
                 Non's 3D Printing Corner
               </li>
@@ -150,6 +157,7 @@
             <a href="about.html">
               <li
                 class="text-md 2xl:text-lg w-fit b relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent cursor-pointer"
+                data-allListItems=""
               >
                 About Us
               </li>
@@ -208,6 +216,7 @@
             <a href="index.html#home">
               <li
                 class="text-xl w-fit b relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent"
+                data-allListItems=""
               >
                 Home
               </li>
@@ -215,6 +224,7 @@
             <a href="gallery.html">
               <li
                 class="text-xl w-fit b relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent"
+                data-allListItems=""
               >
                 Gallery
               </li>
@@ -222,6 +232,7 @@
             <a href="service.html#service">
               <li
                 class="text-xl w-fit b relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent"
+                data-allListItems=""
               >
                 Services
               </li>
@@ -229,6 +240,7 @@
             <a href="impressum.html">
               <li
                 class="text-xl w-fit b relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent"
+                data-allListItems=""
               >
                 Impressum
               </li>
@@ -237,6 +249,7 @@
             <a href="non.html">
               <li
                 class="text-xl w-fit b relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent"
+                data-allListItems=""
               >
                 Non's 3D Printing Corner
               </li>
@@ -244,6 +257,7 @@
             <a href="about.html">
               <li
                 class="text-xl w-fit b relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent"
+                data-allListItems=""
               >
                 About Us
               </li>
@@ -254,7 +268,7 @@
       <div
         class="lg:flex lg:items-center lg:justify-center lg:mt-10 2xl:mt-24 lg:gap-x-10 px-5 500:px-7 md:px-12 lg:px-0"
       >
-        <div>
+        <div class="lg:w-[50%]">
           <h1
             class="mt-10 w-full lg:mt-0 text-4xl tracking-wide font-Overpass 500:text-5xl sm:text-5xl text-white 2xl:text-6xl"
             id="heading"
@@ -292,22 +306,38 @@
             </a>
           </div>
         </div>
+        <div class="w-full h-[2px] bg-white mt-10 lg:hidden" id="black"></div>
         <img
-          class="mt-10 mb-6 lg:w-[50%] 2xl:w-[45%] 2xl:max-w-[1300px]"
-          src="assets/landing-img.png"
+          class="mt-10 mb-6 border-white lg:border-l-2 lg:pl-24 lg:w-[50%] 2xl:w-[50%] 2xl:max-w-[1300px]"
+          id="borderleftcolor"
+          src="assets/homepage-image.png"
           alt=""
         />
       </div>
-      <div class="w-full">
-        <img
-          class="rotate-[270deg] mx-auto w-[50%] sm:w-[40%] lg:w-[35%]"
-          src="assets/arrow.svg"
-          alt=""
-        />
+      <div
+        class="relative px-5 500:px-7 md:px-12 lg:px-0 mt-32 lg:mt-60 rounded-md"
+      >
+        <div
+          class="relative w-full flex items-center justify-center px-5 flex-col pb-7 rounded-xl overflow-hidden group bg-clip-allClip border-[3px] border-solid border-transparent bg-origin-border [background-clip:padding-box,border-box] [background-image:linear-gradient(90deg,#27272a,#27272a),linear-gradient(to_bottom_right,#b827fc_0%,#2c90fc_25%,#b8fd33_50%,#fec837_75%,#fd1892_100%)]"
+          id="roundedBg"
+        >
+          <img
+            class="rotate-[270deg] mx-auto w-[50%] 500:w-[180px]"
+            src="assets/arrow.svg"
+            alt=""
+          />
+          <h1
+            class="text-2xl text-[#ada9a9] group-hover:text-white transition-all duration-300"
+            id="textHover"
+          >
+            Timeline Coming Soon
+          </h1>
+        </div>
       </div>
+
       <!-- services we provide -->
       <div
-        class="2xl:mt-0 lg:gap-x-10 px-5 500:px-7 md:px-12 xl:px-20 2xl:px-40"
+        class="mt-32 2xl:mt-40 lg:gap-x-10 px-5 500:px-7 md:px-12 xl:px-20 2xl:px-40"
       >
         <div class="flex items-center justify-center mt-10">
           <h1
@@ -319,18 +349,18 @@
           </h1>
         </div>
         <div
-          class="flex items-center flex-col lg:w-full justify-center text-center gap-y-7 mt-10 mx-auto md:gap-y-10 lg:gap-x-5 xl:gap-x-10 font-Overpass max-w-[430px] lg:max-w-[800px] xl:max-w-[1000px] lg:text-start lg:gap-y-14"
+          class="flex items-center flex-col lg:w-full justify-center text-center gap-y-7 mt-10 mx-auto md:gap-y-10 lg:gap-x-5 xl:gap-x-10 font-Overpass lg:max-w-[800px] xl:max-w-[1000px] sm:text-start lg:gap-y-14"
         >
           <div
-            class="rounded-lg flex flex-col items-center lg:items-stretch justify-center border-2 border-newAccent lg:flex-row"
+            class="rounded-lg flex flex-col items-center sm:items-stretch justify-center border-2 border-newAccent sm:flex-row transition-all hover:scale-105"
           >
             <img
-              class="rounded-t-md w-full lg:w-[300px] xl:w-[350px] lg:rounded-none lg:rounded-l-md"
+              class="rounded-t-md w-full sm:w-[300px] xl:w-[350px] sm:rounded-none sm:rounded-l-md"
               src="assets/resized-images/2.jpg"
               alt=""
             />
             <div
-              class="pt-1 pb-6 px-5 bg-zinc-800 rounded-b-md lg:rounded-r-md w-full lg:pt-3"
+              class="pt-1 pb-6 px-5 bg-zinc-800 rounded-b-md sm:rounded-r-md w-full lg:pt-3"
               data-bgzinc100=""
             >
               <h1
@@ -351,22 +381,22 @@
               <a
                 href="service.html#service"
                 id="servicesBtn"
-                class="flex items-center gap-x-2 font-[500] bg-Primary px-5 py-2 rounded-md mt-5 w-fit mx-auto lg:mx-[0] text-white lg:text-lg lg:mt-7"
+                class="flex items-center gap-x-2 font-[500] bg-Primary px-5 py-2 rounded-md mt-5 w-fit mx-auto sm:mx-0 text-white lg:text-lg lg:mt-7"
                 data-textblack=""
                 >Services <i class="fa-solid fa-arrow-right lg:text-xl"></i
               ></a>
             </div>
           </div>
           <div
-            class="rounded-lg flex flex-col items-center lg:items-stretch justify-center border-2 border-newAccent lg:flex-row-reverse"
+            class="rounded-lg flex flex-col items-center sm:items-stretch justify-center border-2 border-newAccent sm:flex-row-reverse transition-all hover:scale-105"
           >
             <img
-              class="rounded-t-md w-full lg:w-[300px] xl:w-[350px] lg:rounded-none lg:rounded-r-md"
+              class="rounded-t-md w-full sm:w-[300px] xl:w-[350px] sm:rounded-none sm:rounded-r-md"
               src="assets/resized-images/3.jpg"
               alt=""
             />
             <div
-              class="pt-1 pb-6 px-5 bg-zinc-800 rounded-b-md lg:rounded-l-md w-full lg:pt-3"
+              class="pt-1 pb-6 px-5 bg-zinc-800 rounded-b-md sm:rounded-l-md w-full lg:pt-3"
               data-bgzinc100=""
             >
               <h1
@@ -388,21 +418,21 @@
                 href="service.html#service"
                 id="galleryBtn"
                 data-textblack=""
-                class="flex items-center gap-x-2 font-[500] bg-Primary px-5 py-2 rounded-md mt-5 w-fit mx-auto lg:mx-[0] text-white lg:text-lg lg:mt-7"
+                class="flex items-center gap-x-2 font-[500] bg-Primary px-5 py-2 rounded-md mt-5 w-fit mx-auto sm:mx-0 text-white lg:text-lg lg:mt-7"
                 >Gallery <i class="fa-solid fa-arrow-right lg:text-xl"></i
               ></a>
             </div>
           </div>
           <div
-            class="rounded-lg flex flex-col items-center lg:items-stretch justify-center border-2 border-newAccent lg:flex-row"
+            class="rounded-lg flex flex-col items-center sm:items-stretch justify-center border-2 border-newAccent sm:flex-row transition-all hover:scale-105"
           >
             <img
-              class="rounded-t-md w-full lg:w-[300px] xl:w-[350px] lg:rounded-none lg:rounded-l-md"
+              class="rounded-t-md w-full sm:w-[300px] xl:w-[350px] sm:rounded-none sm:rounded-l-md"
               src="assets/resized-images/4.jpg"
               alt=""
             />
             <div
-              class="pt-1 pb-6 px-5 bg-zinc-800 rounded-b-md lg:rounded-r-md w-full lg:pt-3"
+              class="pt-1 pb-6 px-5 bg-zinc-800 rounded-b-md sm:rounded-r-md w-full lg:pt-3"
               data-bgzinc100=""
             >
               <h1
@@ -424,7 +454,7 @@
                 href="service.html#service"
                 id="aboutusBtn"
                 data-textblack=""
-                class="flex items-center gap-x-2 font-[500] bg-Primary px-5 py-2 rounded-md mt-5 w-fit mx-auto lg:mx-[0] lg:text-lg text-white lg:mt-7"
+                class="flex items-center gap-x-2 font-[500] bg-Primary px-5 py-2 rounded-md mt-5 w-fit mx-auto sm:mx-0 lg:text-lg text-white lg:mt-7"
                 >About Us <i class="fa-solid fa-arrow-right lg:text-xl"></i
               ></a>
             </div>
@@ -636,8 +666,7 @@
         </div>
       </div>
     </footer>
-    <div data-z></div>
-    <!-- data-textblack, data-bgzinc100, data-body, data-bggray500, data-bgzinc300, -->
+
     <script src="menu.js"></script>
     <script src="toggle.js"></script>
   </body>

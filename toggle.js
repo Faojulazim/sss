@@ -36,7 +36,7 @@ toggleBtn.forEach((items, index) => {
     document.querySelectorAll("[data-bgzinc100]").forEach((items) => {
       items.classList.toggle("bg-zinc-800");
     });
-    document.querySelector("[data-body]").classList.toggle("bg-zinc-100");
+    document.querySelector("[data-body]").classList.toggle("bg-white");
     document.querySelector("[data-body]").classList.toggle("bg-black");
     document.querySelectorAll("[data-textblack]").forEach((items) => {
       items.classList.toggle("text-black");
@@ -76,5 +76,26 @@ toggleBtn.forEach((items, index) => {
     document.querySelectorAll("[data-languageSelection]").forEach((items) => {
       items.classList.toggle("text-white");
     });
+
+    document
+      .querySelector("#roundedBg")
+      .classList.toggle(
+        "[background-image:linear-gradient(90deg,#f4f4f5,#f4f4f5),linear-gradient(to_bottom_right,#b827fc_0%,#2c90fc_25%,#b8fd33_50%,#fec837_75%,#fd1892_100%)]"
+      );
+    document
+      .querySelector("#roundedBg")
+      .classList.toggle(
+        "[background-image:linear-gradient(90deg,#27272a,#27272a),linear-gradient(to_bottom_right,#b827fc_0%,#2c90fc_25%,#b8fd33_50%,#fec837_75%,#fd1892_100%)]"
+      );
+    document
+      .querySelector("#textHover")
+      .classList.toggle("group-hover:text-white");
+    document
+      .querySelector("#textHover")
+      .classList.toggle("group-hover:text-black");
+    document.querySelector("#black").classList.toggle("bg-black");
+    document.querySelector("#black").classList.toggle("bg-white");
+    document.querySelector("#borderleftcolor").classList.toggle("border-white");
+    document.querySelector("#borderleftcolor").classList.toggle("border-black");
   });
 });
